@@ -1,0 +1,23 @@
+{
+  "name": "School 2.0",
+  "version": "1.0.0",
+  "description": "A light-weight online learning community.",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "author": "Zenna James",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
+    "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
+    "per-env": "^1.0.2",
+    "react-router-dom": "^6.3.0"
+  },
+  "engines": {
+    "node": "16.14.2"
+  }
+}
