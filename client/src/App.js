@@ -1,26 +1,11 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import logo from "./logo.svg";
-import "./App.css";
+import {BrowserRouter} from "react-router-dom";
+import MainRouter from './MainRouter';
 
-function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
+export default function App() {
   return (
-    <div className="School">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-     
-    </div>
-  );
+  <BrowserRouter>
+    <MainRouter/>
+  </BrowserRouter>
+  )
 }
-
-export default App;
