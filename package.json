@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A light-weight online learning community.",
   "scripts": {
-    "start": "node server/index.js",
+    "server": "node server.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run server\" \"npm run client\"",
     "build": "cd client && npm install && npm run build"
   },
   "author": "Zenna James",

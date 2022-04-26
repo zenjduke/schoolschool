@@ -1,6 +1,8 @@
 // server/index.js
-const path = require('path');
 const express = require('express');
+const dotenv = require('dotenv');
+const path = require('path');
+//const routes = require("./routes");
 
 const app = express();
 dotenv.config();
@@ -9,6 +11,9 @@ const PORT = process.env.PORT || 3001;
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
+
+// Add routes, both API and view
+//app.use(routes);
 
 // Handle GET requests to /api route
 app.get("/api", (req, res) => {
