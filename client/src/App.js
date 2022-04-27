@@ -4,8 +4,8 @@ import MainRouter from './MainRouter';
 
 export default function App() {
   return (
-  <BrowserRouter>
-    <MainRouter/>
-  </BrowserRouter>
+      <BrowserRouter>
+        <MainRouter/>
+      </BrowserRouter>
   )
 }
